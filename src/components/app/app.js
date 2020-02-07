@@ -48,59 +48,46 @@ export default class App extends Component {
     });
   };
 
+  toggleProperty(arr, id, propName) {
+    const idx = arr.findIndex(el => el.id === id);
+
+    const oldItem = arr[idx];
+    const newItem = { ...oldItem, [propName]: !oldItem[propName] };
+
+    return [...arr.slice(0, idx), newItem, ...arr.slice(idx + 1)];
+  }
+
   onToggleDone = id => {
     this.setState(({ todoData }) => {
-      // update object
-      const idx = todoData.findIndex(el => el.id === id);
-
-      const oldItem = todoData[idx];
-      const newItem = { ...oldItem, done: !oldItem.done };
-      // construct new array
-      const newArray = [
-        ...todoData.slice(0, idx),
-        newItem,
-        ...todoData.slice(idx + 1),
-      ];
-
-      return { todoData: newArray };
+      return { todoData: this.toggleProperty(todoData, id, 'done') };
     });
   };
 
   onToggleImportant = id => {
     this.setState(({ todoData }) => {
-      // update object
-      const idx = todoData.findIndex(el => el.id === id);
-
-      const oldItem = todoData[idx];
-      const newItem = { ...oldItem, important: !oldItem.important };
-      // construct new array
-      const newArray = [
-        ...todoData.slice(0, idx),
-        newItem,
-        ...todoData.slice(idx + 1),
-      ];
-
-      return { todoData: newArray };
+      return { todoData: this.toggleProperty(todoData, id, 'important') };
     });
   };
 
   render() {
+    const { todoData } = this.state;
+    const doneCount = todoData.filter(el => el.done).length;
+    const todoCount = todoData.length - doneCount;
+
     return (
-      <div className="todo-app-wrapper">
-        <div className="todo-app">
-          <AppHeader toDo={1} done={3} />
-          <div className="top-panel d-flex">
-            <SearchPanel />
-            <ItemStatusFilter />
-          </div>
-          <TodoList
-            todos={this.state.todoData}
-            onDeleted={this.deleteItem}
-            onToggleDone={this.onToggleDone}
-            onToggleImportant={this.onToggleImportant}
-          />
-          <ItemAddForm onItemAdded={this.addItem} />
+      <div className="todo-app">
+        <AppHeader toDo={todoCount} done={doneCount} />
+        <div className="top-panel d-flex">
+          <SearchPanel />
+          <ItemStatusFilter />
         </div>
+        <TodoList
+          todos={todoData}
+          onDeleted={this.deleteItem}
+          onToggleDone={this.onToggleDone}
+          onToggleImportant={this.onToggleImportant}
+        />
+        <ItemAddForm onItemAdded={this.addItem} />
       </div>
     );
   }
