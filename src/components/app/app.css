@@ -6,3 +6,18 @@
 .top-panel {
   margin: 1rem 0;
 }
+
+body {
+  background-color: #eff1f3;
+}
+
+.btn {
+  /* padding: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #656565;
+  border: none;
+  background: #eff1f3;
+  box-shadow: 4px 4px 7px #cbcdcf, -4px -4px 7px #ffffff;
+}

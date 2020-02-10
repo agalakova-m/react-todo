@@ -1,10 +1,8 @@
 .todo-list-item {
   font-size: 1.25rem;
-}
-
-.todo-list-item button {
-  width: 35px;
-  margin: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .todo-list-item-label {
@@ -12,6 +10,7 @@
   line-height: 35px;
   cursor: pointer;
   user-select: none;
+  font-weight: 300;
 }
 
 .todo-list-item.done .todo-list-item-label {
@@ -22,3 +21,57 @@
   font-weight: bold;
   color: steelblue;
 }
+
+.todo-list-item.important .btn-important {
+  background: #eff1f3;
+  box-shadow: inset 4px 4px 7px #cbcdcf, inset -4px -4px 7px #ffffff;
+}
+
+.todo-list-item .btn {
+  width: 35px;
+  height: 35px;
+  margin: 3px 5px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #656565;
+  background: #eff1f3;
+  box-shadow: 4px 4px 7px #cbcdcf, -4px -4px 7px #ffffff;
+}
+
+.btn:hover {
+  background: linear-gradient(145deg, #ffffff, #d7d9db);
+  box-shadow: 4px 4px 7px #cbcdcf, -4px -4px 7px #ffffff;
+}
+
+.btn:active {
+  background: #eff1f3;
+  box-shadow: inset 4px 4px 7px #cbcdcf, inset -4px -4px 7px #ffffff;
+}
+
+.todo-list-item .btn-trash {
+  padding-left: 1px;
+}
+
+.todo-list-item .btn-important {
+  margin-left: auto;
+}
+
+/*
+
+.btn-trash:active {
+  background: #ff9b85;
+  box-shadow: inset 4px 4px 7px #cc7c6a, inset -4px -4px 7px #ffbaa0;
+}
+
+.btn-important {
+  border-radius: 50px;
+  background: #8eb897;
+  box-shadow: 4px 4px 7px #799c80, -4px -4px 7px #a3d4ae;
+}
+
+.btn-important:active {
+  background: #8eb897;
+  box-shadow: inset 4px 4px 7px #799c80, inset -4px -4px 7px #a3d4ae;
+} */
