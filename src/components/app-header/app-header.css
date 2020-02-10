@@ -4,9 +4,11 @@
 
 .app-header h1 {
   flex-grow: 1;
+  font-weight: normal;
 }
 
 .app-header h2 {
   font-size: 1.2rem;
   color: grey;
+  font-weight: normal;
 }

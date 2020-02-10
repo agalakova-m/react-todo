@@ -12,12 +12,39 @@ body {
 }
 
 .btn {
-  /* padding: 0; */
   display: flex;
   align-items: center;
   justify-content: center;
   color: #656565;
+  font-weight: 350;
   border: none;
   background: #eff1f3;
+  box-shadow: 7px 7px 13px #cbcdcf91, -4px -4px 10px #ffffff;
+}
+
+.btn:hover {
+  background: linear-gradient(145deg, #ffffff, #d7d9db);
+  color: #656565;
   box-shadow: 4px 4px 7px #cbcdcf, -4px -4px 7px #ffffff;
+}
+
+.btn:active {
+  background: #eff1f3;
+  box-shadow: inset 4px 4px 7px #cbcdcf, inset -4px -4px 7px #ffffff;
+}
+
+.input {
+  border: none;
+  background: #eff1f3;
+  box-shadow: 7px 7px 13px #cbcdcf91, -4px -4px 10px #ffffff;
+}
+
+.input:focus {
+  background: #eff1f3;
+  box-shadow: inset 7px 7px 13px #cbcdcf, inset -7px -7px 13px #ffffff;
+}
+
+.input::placeholder {
+  font-weight: 300;
+  color: #808c94;
 }

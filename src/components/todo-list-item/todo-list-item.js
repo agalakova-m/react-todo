@@ -52,25 +52,25 @@ export default class TodoListItem extends Component {
           >
             <g
               fill="none"
-              stroke-linejoin="none"
-              stroke-miterlimit="10"
-              font-family="none"
-              font-weight="none"
-              font-size="none"
-              text-anchor="none"
+              strokeLinejoin="none"
+              strokeMiterlimit="10"
+              fontFamily="none"
+              fontWeight="none"
+              fontSize="none"
+              textAnchor="none"
             >
               <path
                 d="M97.398 17.613a5.7 5.7 0 015.777 5.699h34.115a5.7 5.7 0 110 11.398H34.71a5.7 5.7 0 110-11.398h34.115a5.7 5.7 0 015.777-5.7zm39.892 28.494v91.183c0 6.298-5.1 11.398-11.397 11.398H46.107c-6.297 0-11.397-5.1-11.397-11.398V46.107z"
                 fill="#666"
                 stroke="#000"
-                stroke-linejoin="round"
-                stroke-width=".994"
+                strokeLinejoin="round"
+                strokeWidth=".994"
               />
               <path d="M.516 171.484V.516h170.968v170.968z" />
               <path
                 d="M74.602 17.613a5.7 5.7 0 00-5.777 5.699H34.71a5.7 5.7 0 100 11.398h102.58a5.7 5.7 0 100-11.398h-34.115a5.7 5.7 0 00-5.777-5.7zM34.71 46.107v91.183c0 6.298 5.1 11.398 11.397 11.398h79.786c6.297 0 11.397-5.1 11.397-11.398V46.107z"
                 fill="#666"
-                stroke-linejoin="miter"
+                strokeLinejoin="miter"
               />
             </g>
           </svg>

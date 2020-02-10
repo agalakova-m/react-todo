@@ -6,6 +6,9 @@
   margin-right: 8px;
 }
 
-.item-add-form .btn {
+.item-add-form .btn-add {
+  background: linear-gradient(145deg, #ffffff, #d7d9db);
+  color: #656565;
+  box-shadow: 4px 4px 7px #cbcdcf;
   white-space: nowrap;
 }

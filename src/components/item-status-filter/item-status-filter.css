@@ -1,0 +1,11 @@
+.btn.btn-filter {
+  background: linear-gradient(145deg, #ffffff, #d7d9dbbf);
+  color: #656565;
+  box-shadow: 4px 4px 7px #cbcdcf;
+  white-space: nowrap;
+}
+
+.btn.btn-filter-active {
+  background: #eff1f3;
+  box-shadow: inset 5px 5px 7px #cbcdcf;
+}

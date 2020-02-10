@@ -16,7 +16,7 @@ export default class SearchPanel extends Component {
     return (
       <input
         type="text"
-        className="form-control search-input"
+        className="form-control search-input input"
         placeholder="type to search"
         onChange={this.onSearchChange}
         value={this.state.searchValue}
