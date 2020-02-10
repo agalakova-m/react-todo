@@ -1,4 +1,5 @@
 .app-header {
+  display: flex;
   align-items: flex-end;
 }
 
@@ -11,4 +12,5 @@
   font-size: 1.2rem;
   color: grey;
   font-weight: normal;
+  margin-bottom: 8px;
 }

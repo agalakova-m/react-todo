@@ -41,13 +41,15 @@ export default class App extends Component {
   };
 
   addItem = text => {
-    const newItem = this.createTodoItem(text);
-    this.setState(({ todoData }) => {
-      const newArray = [...todoData, newItem];
-      return {
-        todoData: newArray,
-      };
-    });
+    if (text.length > 0) {
+      const newItem = this.createTodoItem(text);
+      this.setState(({ todoData }) => {
+        const newArray = [...todoData, newItem];
+        return {
+          todoData: newArray,
+        };
+      });
+    }
   };
 
   toggleProperty(arr, id, propName) {
@@ -110,7 +112,7 @@ export default class App extends Component {
     return (
       <div className="todo-app">
         <AppHeader toDo={todoCount} done={doneCount} />
-        <div className="top-panel d-flex">
+        <div className="top-panel">
           <SearchPanel onSearchChange={this.onSearchChange} />
           <ItemStatusFilter
             filter={filter}

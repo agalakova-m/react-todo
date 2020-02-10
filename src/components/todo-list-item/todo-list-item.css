@@ -36,10 +36,14 @@
   padding-left: 1px;
 }
 
-.todo-list-item .btn-trash {
-  padding-left: 1px;
+.todo-list-item .btn-trash:hover {
+  color: #ff9b85;
 }
 
 .todo-list-item .btn-important {
   margin-left: auto;
+}
+
+.todo-list-item .btn-important:hover {
+  color: #8eb897;
 }
