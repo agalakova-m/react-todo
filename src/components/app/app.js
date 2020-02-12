@@ -6,7 +6,6 @@ import TodoList from '../todo-list';
 import ItemStatusFilter from '../item-status-filter';
 import ItemAddForm from '../item-add-form';
 
-import 'normalize.css';
 import './app.css';
 
 export default class App extends Component {
