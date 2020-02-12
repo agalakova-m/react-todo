@@ -35,19 +35,22 @@ button {
   transition: all 0.15s ease;
 }
 
-button:hover {
+button:not(.active):hover,
+button:not(.active):focus {
   background: linear-gradient(145deg, #ffffff, #d7d9db);
   color: #656565;
   box-shadow: 4px 4px 7px #cbcdcf, -4px -4px 7px #ffffff;
 }
 
 button:active,
-button:not(.active):focus,
 button.active,
 button.active:hover {
-  outline: none;
   background: #eff1f3;
   box-shadow: inset 4px 4px 7px #cbcdcf, inset -4px -4px 7px #ffffff;
+}
+
+button:focus {
+  outline: none;
 }
 
 input {

@@ -36,7 +36,8 @@
   padding-left: 1px;
 }
 
-.todo-list-item .btn-trash:hover {
+.todo-list-item .btn-trash:hover,
+.todo-list-item .btn-trash:focus {
   color: #ff9b85;
 }
 
@@ -44,6 +45,7 @@
   margin-left: auto;
 }
 
-.todo-list-item .btn-important:hover {
+.todo-list-item .btn-important:hover,
+.todo-list-item .btn-important:focus {
   color: #8eb897;
 }
