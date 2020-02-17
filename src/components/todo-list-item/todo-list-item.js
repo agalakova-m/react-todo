@@ -4,42 +4,30 @@ import './todo-list-item.css';
 
 export default class TodoListItem extends Component {
   render() {
-    const {
-      label,
-      onDeleted,
-      onToggleDone,
-      onToggleImportant,
-      done,
-      important,
-    } = this.props;
+    const { label, onDeleted, onToggleDone, done } = this.props;
 
     let classNames = 'todo-list-item';
     if (done) {
       classNames += ' done';
     }
 
-    if (important) {
-      classNames += ' important';
-    }
-
     return (
       <span className={classNames}>
-        <span className="todo-list-item-label" onClick={onToggleDone}>
-          {label}
-        </span>
-        <button
-          type="button"
-          className="btn btn-important"
-          onClick={onToggleImportant}
-        >
+        <span className="todo-list-item-label">{label}</span>
+        <button type="button" className="btn btn-done" onClick={onToggleDone}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 50 50"
+            width="20"
+            height="20"
+            viewBox="0 0 172 172"
             fill="currentColor"
           >
-            <path d="M23 0c-.55 0-1 .45-1 1v38a1 1 0 001 1h4c.555 0 1-.445 1-1V1a1 1 0 00-1-1zm0 44a1 1 0 00-1 1v4a1 1 0 001 1h4c.555 0 1-.445 1-1v-4c0-.555-.445-1-1-1z" />
+            <g fill="none">
+              <path
+                d="M148.11 48.378l-78.36 78.36-5.121 4.898-5.12-4.898L23.89 91.12l10.24-10.24 30.498 30.498 73.24-73.24z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </button>
         <button type="button" className="btn btn-trash" onClick={onDeleted}>
@@ -50,15 +38,7 @@ export default class TodoListItem extends Component {
             fill="currentColor"
             viewBox="0 0 172 172"
           >
-            <g
-              fill="none"
-              strokeLinejoin="none"
-              strokeMiterlimit="10"
-              fontFamily="none"
-              fontWeight="none"
-              fontSize="none"
-              textAnchor="none"
-            >
+            <g fill="none">
               <path
                 d="M97.398 17.613a5.7 5.7 0 015.777 5.699h34.115a5.7 5.7 0 110 11.398H34.71a5.7 5.7 0 110-11.398h34.115a5.7 5.7 0 015.777-5.7zm39.892 28.494v91.183c0 6.298-5.1 11.398-11.397 11.398H46.107c-6.297 0-11.397-5.1-11.397-11.398V46.107z"
                 fill="currentColor"

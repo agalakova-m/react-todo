@@ -23,7 +23,6 @@ export default class App extends Component {
   createTodoItem(label) {
     return {
       label,
-      important: false,
       done: false,
       id: this.maxId++,
     };
@@ -66,11 +65,11 @@ export default class App extends Component {
     });
   };
 
-  onToggleImportant = id => {
-    this.setState(({ todoData }) => {
-      return { todoData: this.toggleProperty(todoData, id, 'important') };
-    });
-  };
+  // onToggleImportant = id => {
+  //   this.setState(({ todoData }) => {
+  //     return { todoData: this.toggleProperty(todoData, id, 'important') };
+  //   });
+  // };
 
   onSearchChange = term => {
     this.setState({ term });
@@ -122,7 +121,6 @@ export default class App extends Component {
           todos={visibleItems}
           onDeleted={this.deleteItem}
           onToggleDone={this.onToggleDone}
-          onToggleImportant={this.onToggleImportant}
         />
         <ItemAddForm onItemAdded={this.addItem} />
       </div>

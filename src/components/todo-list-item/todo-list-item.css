@@ -8,22 +8,21 @@
 .todo-list-item-label {
   margin-left: 1.25rem;
   line-height: 35px;
-  cursor: pointer;
   user-select: none;
   font-weight: 300;
   transition: all 0.15s ease;
 }
 
 .todo-list-item.done .todo-list-item-label {
-  text-decoration: line-through;
-}
-
-.todo-list-item.important .todo-list-item-label {
   font-weight: 500;
   color: #478053;
 }
 
-.todo-list-item.important .btn-important {
+.todo-list-item.done .btn-done {
+  color: #8eb897;
+}
+
+.todo-list-item.done .btn-done {
   background: #eff1f3;
   box-shadow: inset 4px 4px 7px #cbcdcf, inset -4px -4px 7px #ffffff;
 }
@@ -41,11 +40,11 @@
   color: #ff9b85;
 }
 
-.todo-list-item .btn-important {
+.todo-list-item .btn-done {
   margin-left: auto;
 }
 
-.todo-list-item .btn-important:hover,
-.todo-list-item .btn-important:focus {
+.todo-list-item .btn-done:hover,
+.todo-list-item .btn-done:focus {
   color: #8eb897;
 }
